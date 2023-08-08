@@ -6,6 +6,8 @@ let score4 = undefined;
 let score5 = true;
 let score6="Lokesh";
 
+
+
 let IsScoreNumber = Number(score);
 console.log(typeof(IsScoreNumber))
 console.log(IsScoreNumber);
@@ -61,6 +63,7 @@ console.log(typeof(stringNumber))
 
 // *********************** Operations ***********************
 
+// console.log(typeof(NaN))
 let value = 3
 let negValue = -value
 // console.log(negValue);
@@ -93,8 +96,24 @@ let num1, num2, num3
 num1 = num2 = num3 = 2 + 2
 
 let gameCounter = 100
-++gameCounter;
-console.log(gameCounter);
+// ++gameCounter;
+// let b = gameCounter++;
+// console.log(b);
+
+
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+
+
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion

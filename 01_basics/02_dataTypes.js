@@ -1,6 +1,6 @@
 "use strict" //treat all js as newer version
 
-// alert(4+8); //can't use in newer version
+// alert(4+8); //we are using nodejs, not browser
 
 console.log("Lokesh Ghosh");
 
