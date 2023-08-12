@@ -29,7 +29,7 @@ user.age=22;
 
 let a=user;
 a.age=30;
-console.log(user)
+// console.log(user)
 
 
 user.greeting = function(){
@@ -39,10 +39,25 @@ user.greeting = function(){
 // console.log(user.greeting());
 
 user.greetingTwo = function(){
-    console.log(`Hello User, ${this["full name"]}`);
+    // console.log(`Hello User, ${this["full name"]}`);
 
 }
 
 // console.log(user.greetingTwo());
+
+
+// documentation 
+const person={
+    name:"lokesh",
+    age:20,
+    location:"Kolkata"
+};
+
+for(let x in person){
+    console.log(`${x}: ${person[x]}`);
+}
+
+delete person.age
+console.log(person)
 
 
