@@ -27,7 +27,7 @@ const obj2 ={
 
 // const obj3={obj1, obj2};
 // const obj3 = Object.assign({}, obj1, obj2);
-const obj3 = {...obj1, ...obj2};
+// const obj3 = {...obj1, ...obj2}; // (...isCalledSpreading)
 // console.log(obj3);
 
 
@@ -62,7 +62,7 @@ const course = {
    courseInstructor:"hitesh"
 }
 
-const {courseInstructor:instructor} = course
+const {courseInstructor:instructor} = course  //******this is called object de-structure******
 console.log(instructor);
 
 
