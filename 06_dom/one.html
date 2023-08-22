@@ -4,11 +4,54 @@
     <meta charset="UTF-8">
    
     <title>DOM tutorial</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
-<body>
+<body  class="bg-black">
     
-    <div class="bg-black">
-        
+    <div>
+        <h1 id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quae.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
     </div>
+
+    <script>
+
+        // .innerHTML = select including tags( DOM learning on Chai aur code <span>test text</span> )
+
+        // .innerText = select all visible text ( DOM learning on Chai aur code )
+
+        // .innerContent = select all visible and invisible text( DOM learning on Chai aur code test text )
+
+
+        // .querySelector supports all css selectors(it only select the 1st item)
+        // document.querySelector('#title')
+        // document.querySelector('.heading')
+        // document.querySelector('h1')
+        // document.querySelector('input[type="password"]')
+
+        // .querySelectorAll return node list
+        // const myli = document.querySelectorAll('li');
+        // myli.style.color="green"; //will throw an error
+        // myli[0].style.color="green";
+
+        // myli.forEach((l)=>{
+        // l.style.backgroundColor="green"
+        // })
+
+        
+    </script>
 </body>
 </html>
