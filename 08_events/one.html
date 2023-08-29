@@ -18,6 +18,12 @@
         </ul>
    </div>
 
+   <div class="text">Lokesh Ghosh</div>
+
+   <ul class="parent">
+    <li class="child">This is child list</li>
+   </ul>
+
 </body>
 
 <script>
@@ -33,6 +39,54 @@
     // target, toElement, srcElement, currentTarget
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode 
+
+
+
+    // type
+    document.querySelector('.text').addEventListener('click',(e)=>{
+        // console.log(e.target);
+        e.target.innerHTML = "A full stack developer from INDIA.";
+
+        // getEventType(e);
+
+        // getTimeStamp(e);
+
+        getCurrentTarget(e);
+
+
+    }, false);
+
+    function getEventType(events){
+        // console.log(`Event Type is : ${event.type}`)
+
+        // console.log(`Event Type is : ${events.type}`)
+
+        // console.log(event.toElement);
+        
+    }
+
+    // timestamp 
+    function getTimeStamp(events){
+        // console.log(`Time stamp is : ${events.timeStamp}`);
+    }
+
+
+    // current Target
+    document.querySelector('.parent').addEventListener('click',(e)=>{
+    
+        console.log(`Target : ${e.target.className}`);
+        console.log(`Current Target : ${e.currentTarget.className}`);
+    }, false)
+
+    // Client X/Y
+   let text = document.querySelector('.text')
+   text.addEventListener('mousemove', (e)=>{
+    e.target.innerHTML = `
+    Page X/Y : ${e.pageX}, ${e.pageY} <br>
+    Screen X/Y : ${e.screenX}, ${e.screenY} <br>
+    Client X/Y : ${e.clientX}, ${e.clientY}`
+
+   },false)
 
 
     document.getElementById('owl').addEventListener('click',(e)=>{
