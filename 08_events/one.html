@@ -24,6 +24,10 @@
     <li class="child">This is child list</li>
    </ul>
 
+   <input type="text" onkeydown="isKeyPressed(event)">
+
+    <p id="demo"></p>
+
 </body>
 
 <script>
@@ -88,6 +92,40 @@
 
    },false)
 
+//    altKey
+   function isKeyPressed(event){
+    if(event.altKey){
+        document.querySelector('#demo').innerHTML = "alt key pressed";
+        console.log(`Key code of altKey is ${event.keyCode}`);
+        console.log(event.location);
+       
+    }
+
+    // ctrlKey
+    else if(event.ctrlKey){
+
+        document.querySelector('#demo').innerHTML = "ctrl key pressed";
+        console.log(`Key code of ctrlKey is ${event.keyCode}`);
+       
+    }
+
+    // shiftKey
+    else if(event.shiftKey){
+        document.querySelector('#demo').innerHTML = "shift key pressed";
+        console.log(`Key code of shiftKey is ${event.keyCode}`);
+    }
+
+    // metaKey(windows key/ cmd key)
+    else if(event.metaKey){
+        document.querySelector('#demo').innerHTML = "meta key pressed";
+        console.log(`Key code of metaKey is ${event.keyCode}`);
+    }
+
+    else{
+        document.querySelector('#demo').innerHTML = "Non of the key pressed"
+    }
+   }
+   
 
     document.getElementById('owl').addEventListener('click',(e)=>{
         console.log("Clicked owl");
