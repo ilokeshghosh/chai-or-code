@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Request Project</title>
+
+    <style>
+      * {
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #212121;
+        color: white;
+      }
+
+      .container {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        height: 100vh;
+      }
+
+
+      .card{
+        border: 2px solid greenyellow;
+        /* border: 2px solid yellow; */
+        /* height: 50%; */
+        height: 300px;
+        width: 500px;
+        display: flex;
+        border-radius:20px;
+        
+        flex-direction: row;
+        /* overflow: hidden; */
+      } 
+
+      .image{
+        /* border:2px solid red; */
+        width:60%;
+        height:100%;
+        border-radius:20px;
+      }
+      
+      .text{
+        /* border: 2px solid blue; */
+        width:40%;
+        height:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px; /* Add padding for spacing */
+        margin: 10px; /* Add margin for spacing */
+        
+
+      }
+
+      .avatar{
+        /* border: 2px solid greenyellow; */
+        height: 100%;
+        width: 100%;
+        border-radius:20px;
+      }
+
+      .name{
+        /* border:2px solid green; */
+        font-size: 1.5rem; 
+        margin-bottom: 10px; 
+      }
+
+      
+
+     
+      .button {
+        background-color: cadetblue;
+        border-radius: 10px;
+        color: black;
+        font-weight: bold;
+        padding: 5px 10px;
+        /* height: 20%; */
+        /* margin-top: 2rem; */
+        /* margin: auto; */
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- img -->
+        <div class="image"><img class="avatar" src="" alt="" /></div>
+
+        <!-- text -->
+        <div class="text">
+          <h1 class="name"></h1>
+          <p class="followers"></p>
+          <p class="repo_count"></p>
+        </div>
+        
+      </div>
+
+      
+      <button class="button">Get Data</button>
+    </div>
+    
+  </body>
+
+  <script>
+    const url = "https://api.github.com/users/ilokeshghosh";
+    const card = document.querySelector('.card');
+    const button = document.querySelector(".button");
+
+    card.style.display = 'none';
+
+    button.addEventListener(
+      "click",
+      () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onreadystatechange = function () {
+          console.log(xhr.readyState);
+          if (xhr.readyState === 4) {
+            card.style.display = 'flex';
+            button.style.display = 'none';
+            const data = JSON.parse(this.responseText);
+            // console.log(typeof data);
+
+            document.querySelector(".avatar").src = data.avatar_url;
+
+            document.querySelector(".name").innerHTML = data.name;
+            document.querySelector(".followers").innerHTML = `Followers: ${data.followers}`;
+            document.querySelector(".repo_count").innerHTML = `Number of repos : ${data.public_repos}`;
+
+
+             
+          }
+        };
+
+        xhr.send();
+      },
+      false
+    );
+  </script>
+</html>
