@@ -1,0 +1,58 @@
+const promiseOne = new Promise(function(resolve, reject){
+    // Do an async task
+    // DB calls, crypography, newtwork
+    setTimeout(()=>{
+        console.log("Async task is compelete")
+        resolve();
+    },1000)
+});
+
+
+promiseOne.then(function(){
+    console.log("Promise consumed");
+})
+
+
+new Promise((resolve, reject)=>{
+
+    setTimeout(()=>{
+        console.log("Async Task 2 compelete")
+        // console.log("hi");
+        resolve();
+    }, 1000);
+}).then(()=>{
+    console.log("Async task 2 is consumed");
+})
+
+
+const promiseThree = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+        resolve({username: "lokesh", email : "lokesh@gmail.com"})
+    }, 1000);
+})
+
+promiseThree.then((user)=>{
+    console.log(user);
+})
+
+
+const promiseFour = new Promise(function(resolve, reject){
+
+    setTimeout(()=>{
+        let error = true;
+        if(!error){
+            resolve({username:"lokesh", password:"123"});
+        }else{
+            reject('ERROR Something went wrong')
+        }
+    },2000)
+})
+
+promiseFour.then((user)=>{
+    console.log(user);
+    return user.username;
+}).then((username)=>{
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+})
