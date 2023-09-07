@@ -21,4 +21,4 @@ let isLoggedIn = false
 //object
 
 console.log(typeof null)   //type object
-console.log(typeof undefined)  //type undefined
+console.log(typeof undefined)  //type undefined  

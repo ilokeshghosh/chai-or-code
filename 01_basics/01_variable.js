@@ -12,3 +12,8 @@ Prefered not use var because of issue in block scope and functional scope
 console.log(id);
 
 console.table([id, email, city, state, country])
+
+var name= "lokesh";
+console.log(name);
+var name;
+console.log(name);
