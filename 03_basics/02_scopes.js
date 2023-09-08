@@ -38,14 +38,22 @@ if(true){
 
 
 // ****************interesting**********************
-addone(5);
+// addone(5);
 function addone(num){
     return num+1;
 }
 
-addTwo(4)
+// addTwo(4)
 const addTwo = function(num){
     return num+2;
 }
 
- 
+
+// Automatically Global
+myFunction();
+
+// code here can use carName
+console.log(carName);
+function myFunction() {
+ carName = "Volvo";
+}

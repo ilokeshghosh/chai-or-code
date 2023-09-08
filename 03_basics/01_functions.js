@@ -68,4 +68,7 @@ function cartPrice(val1, val2, ...num){
 
 // cartPrice(100, 200, 600, 500, 199);
 
-
+// self invoking function
+(function (num){
+    console.log(`num : ${num}`);
+})(10);

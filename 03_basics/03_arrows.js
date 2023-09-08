@@ -48,9 +48,9 @@ const newFun3 = () =>{
 
 // const addTwo=(num1, num2) =>  num1+num2
 
-// const addTwo=(num1, num2) =>  (num1+num2)
+const addTwo=(num1, num2) =>  (num1+num2)
 
-const addTwo=(num1, num2) =>  ({username:"Lokesh"})
+// const addTwo=(num1, num2) =>  ({username:"Lokesh"})
 
 
 
