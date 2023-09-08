@@ -23,9 +23,9 @@ user.email = "ghoshlokesh@gmail.com";
 user["email"] = "ghosh@lokesh@gmail.com";
 // console.log(user);
 
-// Object.freeze(user);
+Object.freeze(user);
 user.age=22;
-// console.log(user);
+console.log(user);
 
 let a=user;
 a.age=30;
@@ -33,7 +33,7 @@ a.age=30;
 
 
 user.greeting = function(){
-    console.log("Hello User");
+    // console.log("Hello User");
 }
 // console.log(user.greeting);
 // console.log(user.greeting());
@@ -54,10 +54,10 @@ const person={
 };
 
 for(let x in person){
-    console.log(`${x}: ${person[x]}`);
+    // console.log(`${x}: ${person[x]}`);
 }
 
 delete person.age
-console.log(person)
+// console.log(person)
 
 

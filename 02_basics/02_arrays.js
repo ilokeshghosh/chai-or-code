@@ -13,6 +13,11 @@ let all_heros = marvel_heros.concat(dc_heros);
 let all_nheros = [...marvel_heros, ...dc_heros];
 // console.log(all_nheros)
 
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+// console.log(rest);
+
 
 let another_array=[1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
 // console.log(another_array.flat(1))
@@ -26,6 +31,6 @@ let another_array=[1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
 let s1= 100
 let s2=200
 let s3=300
-console.log(Array.of(s1, s2, s3));
+// console.log(Array.of(s1, s2, s3));
 
 
