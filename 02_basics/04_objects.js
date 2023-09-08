@@ -27,9 +27,19 @@ const obj2 ={
 
 // const obj3={obj1, obj2};
 // const obj3 = Object.assign({}, obj1, obj2);
-// const obj3 = {...obj1, ...obj2}; // (...isCalledSpreading)
+const obj3 = {...obj1, ...obj2}; // (...isCalledSpreading)
 // console.log(obj3);
 
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+// console.log(target);
+const returnedTarget = Object.assign(target, source);
+
+// console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+// console.log(returnedTarget === target);
+// Expected output: true
 
 const user3 =[
     {
@@ -53,7 +63,7 @@ const user3 =[
 // console.log(Object.keys(user1));
 // console.log(Object.values(user1));
 // console.log(Object.entries(user1));
-// console.log(user1.hasOwnProperty('age'));
+console.log(user1.hasOwnProperty('age'));
 
 
 const course = {
