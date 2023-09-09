@@ -15,12 +15,12 @@ for(const key in programming){
 }
 
 
-const map = new Map();
-map.set("IND", "India")
-map.set("BR", "Brazil")
-map.set("FR", "France")
-map.set("IND", "India")
-
-for (const key in map) {
+const maps = new Map();
+maps.set("IND", "India")
+maps.set("BR", "Brazil")
+maps.set("FR", "France")
+maps.set("IND", "India")
+console.log(maps);
+for (const key in maps) {
    console.log(key);
 }

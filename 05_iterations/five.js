@@ -13,10 +13,10 @@ coding.forEach((item)=>{
 
 
 function printme(item){
-    console.log(item);
+    // console.log(item);
 }
 
-// coding.forEach(printme);
+coding.forEach(printme);
 
 
 coding.forEach( (item, index, arrayList)=>{
@@ -44,7 +44,7 @@ const myCoding =[
 myCoding.forEach((item)=>{
 
     for (const key in item) {
-        // console.log(`Key : ${key} && item[${key}] : ${item[key]}`);
+        console.log(`Key : ${key} && item[${key}] : ${item[key]}`);
     }
     // console.log(`Language Name : ${item.languageFileName} and   Language File Name : ${item.languageFileName}`);
 
