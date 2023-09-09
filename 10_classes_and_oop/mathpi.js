@@ -18,7 +18,7 @@ const chai ={
 // console.log(chai);
 
 
-// console.log(Object.getOwnPropertyDescriptor(chai, 'name'));
+console.log(Object.getOwnPropertyDescriptor(chai, 'name'));
 
 // this will not change the property
 // console.log(Object.getOwnPropertyDescriptor(chai, 'name').configurable);

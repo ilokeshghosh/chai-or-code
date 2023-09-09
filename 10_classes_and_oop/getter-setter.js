@@ -7,18 +7,20 @@ class User{
     get email(){
         return this._email.toUpperCase();
     }
-
-    set password(value){
-        this._password= value;
+    set email(value){
+        this._email = value;
     }
+
+    
 
     get password(){
         return this._password.toUpperCase();
     }
-
-    set email(value){
-        this._email = value;
+    set password(value){
+        this._password= value;
     }
+
+    
 }
 
 const lokesh = new User("lokesh@gmail.com", 'abc');

@@ -14,7 +14,7 @@ class User{
 
 const u1 = new User('lokesh');
 u1.logMe();
-// console.log(u1.createId());
+// console.log(u1.createId()); //will throw error
 
 
 class Teacher extends User{
