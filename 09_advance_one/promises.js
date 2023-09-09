@@ -80,27 +80,27 @@
 
 // consumePromiseFive();
 
-// async function getdata(){
-//     try{
-//         const response = await fetch('https://api.github.com/users/ilokeshghosh');
-//         const data = await response.json();
-//         console.log(data);
-//     }catch(error){
-//         console.log("E: ",error);
-//     }
-// }
+async function getdata(){
+    try{
+        const response = await fetch('https://api.github.com/users/ilokeshghosh');
+        const data = await response.json();
+        console.log(data);
+    }catch(error){
+        console.log("E: ",error);
+    }
+}
 
-// getdata();
+getdata();
 
 
 
-fetch('https://api.github.com/users/ilokeshghosh')
-.then((respose)=>{
-    // console.log(respose.login);
-    return respose.json();
-}).then((data)=>{
-    console.log(data.login)
-})
-.catch((error)=>{
-    console.log("Error");
-})
+// fetch('https://api.github.com/users/ilokeshghosh')
+// .then((respose)=>{
+//     // console.log(respose.login);
+//     return respose.json();
+// }).then((data)=>{
+//     console.log(data.login)
+// })
+// .catch((error)=>{
+//     console.log("Error");
+// })
