@@ -32,9 +32,9 @@
 
 <script>
 
-    // document.getElementById('owl').onclick = function(){
-    //     alert("Owl Clicked");
-    // }
+    document.getElementById('owl').onclick = function(){
+        alert("Owl Clicked");
+    }
 
     // attachEvent()
     // jQuery - on
@@ -75,9 +75,9 @@
     }
 
     // timestamp 
-    function getTimeStamp(events){
-        // console.log(`Time stamp is : ${events.timeStamp}`);
-    }
+    // function getTimeStamp(events){
+    //     console.log(`Time stamp is : ${events.timeStamp}`);
+    // }
 
 
     // current Target
@@ -132,6 +132,7 @@
    }
    
 
+   //propagation
     document.getElementById('owl').addEventListener('click',(e)=>{
         console.log("Clicked owl");
         // e.stopPropagation();  //it will stop propagation
