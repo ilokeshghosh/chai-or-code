@@ -66,6 +66,8 @@ let myAccount2 = myAccount1;
 console.log(myAccount1.userId);
 console.log(myAccount2.userId);
 
+
+
 myAccount2.userId="ghosh@gmail.com";
 
 console.log(myAccount1.userId);

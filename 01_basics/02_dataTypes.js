@@ -7,6 +7,7 @@ console.log("Lokesh Ghosh");
 let name="Lokesh Ghosh"
 let age=22;
 let isLoggedIn = false
+console.log(typeof isLoggedIn)
 
 
 //number=>2 to power 53

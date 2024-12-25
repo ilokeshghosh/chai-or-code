@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <button id="child">Click me !</button>
+    </div>
+
+    <script>
+      document.querySelector("#parent").addEventListener("mousemove", (e) => {
+        // console.log(`Screen X/Y : X(${e.screenX})/Y(${e.screenY})`); //entire Screen
+        // console.log(`Client X/Y : X(${e.clientX})/Y(${e.clientY})`); // visible browser window
+        // console.log(`Page X/Y : X(${e.pageX})/Y(${e.pageY})`); //entire web page
+        // console.log(`Offset X/Y : X(${e.offsetX})/Y(${e.offsetY})`); //element that triggered the event
+      });
+
+      document.querySelector("#parent").addEventListener("click", (e) => {
+        console.log("Parent element clicked");
+        // e.stopPropagation()
+
+      });
+
+      document.querySelector("#child").addEventListener("click", (e) => {
+        console.log("Child element clicked");
+        e.stopPropagation()
+      },true);
+    </script>
+  </body>
+</html>
